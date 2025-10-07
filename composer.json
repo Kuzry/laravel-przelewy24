@@ -1,0 +1,81 @@
+{
+  "name": "kuzry/laravel-przelewy24",
+  "version": "1.0.0",
+  "description": "Laravel integration package for Przelewy24 payment gateway",
+  "keywords": [
+      "laravel",
+      "laravel-przelewy24",
+      "przelewy24",
+      "payment",
+      "payment-gateway",
+      "payments",
+      "poland"
+  ],
+  "homepage": "https://github.com/kuzry/laravel-przelewy24",
+  "license": "MIT",
+  "type": "library",
+  "authors": [
+    {
+      "name": "Krzysztof Kuzara",
+      "email": "krzysztof.kzr1@gmail.com",
+      "role": "developer"
+    }
+  ],
+  "require": {
+    "php": "^8.2 || 8.3 || 8.4",
+    "illuminate/contracts": "^11.0||^12.0",
+    "saloonphp/saloon": "^3.14",
+    "spatie/laravel-data": "^4.17"
+  },
+  "require-dev": {
+    "larastan/larastan": "^3.0",
+    "laravel/pint": "^1.14",
+    "nunomaduro/collision": "^8.8",
+    "orchestra/testbench": "^10.0.0||^9.0.0",
+    "pestphp/pest": "^4.0",
+    "pestphp/pest-plugin-arch": "^4.0",
+    "pestphp/pest-plugin-laravel": "^4.0",
+    "phpstan/extension-installer": "^1.4",
+    "phpstan/phpstan": "^2.1",
+    "phpstan/phpstan-deprecation-rules": "^2.0",
+    "phpstan/phpstan-phpunit": "^2.0",
+    "spatie/laravel-ray": "^1.35"
+  },
+  "autoload": {
+    "psr-4": {
+      "Kuzry\\Przelewy24\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Kuzry\\Przelewy24\\Tests\\": "tests/"
+    }
+  },
+  "scripts": {
+    "post-autoload-dump": "@composer run prepare",
+    "prepare": "@php vendor/bin/testbench package:discover --ansi",
+    "analyse": "vendor/bin/phpstan analyse",
+    "test": "vendor/bin/pest",
+    "test-coverage": "vendor/bin/pest --coverage",
+    "format": "vendor/bin/pint"
+  },
+  "config": {
+    "sort-packages": true,
+    "allow-plugins": {
+      "pestphp/pest-plugin": true,
+      "phpstan/extension-installer": true
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Kuzry\\Przelewy24\\Przelewy24ServiceProvider"
+      ],
+      "aliases": {
+        "Przelewy24": "Kuzry\\Przelewy24\\Facades\\Przelewy24"
+      }
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}
