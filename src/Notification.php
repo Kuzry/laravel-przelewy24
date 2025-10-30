@@ -4,6 +4,7 @@ namespace Kuzry\Przelewy24;
 
 use Kuzry\Przelewy24\Data\Przelewy24ConfigData;
 use Kuzry\Przelewy24\Data\TransactionRegisterNotificationData;
+use Kuzry\Przelewy24\Traits\PosTrait;
 
 class Notification
 {

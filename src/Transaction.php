@@ -13,6 +13,7 @@ use Kuzry\Przelewy24\Data\TransactionRegisterRequestData;
 use Kuzry\Przelewy24\Data\TransactionRegisterResponseData;
 use Kuzry\Przelewy24\Data\TransactionVerifyRequestData;
 use Kuzry\Przelewy24\Data\TransactionVerifyResponseData;
+use Kuzry\Przelewy24\Traits\PosTrait;
 
 class Transaction
 {

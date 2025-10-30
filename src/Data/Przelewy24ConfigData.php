@@ -12,22 +12,22 @@ use Spatie\LaravelData\Data;
 class Przelewy24ConfigData extends Data
 {
     public function __construct(
-        public readonly Environment $environment,
-        public readonly bool $autoRegisterFrontendData,
         /** @var Przelewy24ConfigPosData[] */
         public readonly array $pos,
-        public readonly Currency $currency,
-        public readonly string $urlReturn,
-        public readonly string $urlStatus,
-        public readonly string $urlTransactionRegister,
-        public readonly ?string $method,
-        public readonly ?int $timeLimit,
-        public readonly ?Channel $channel,
-        public readonly ?bool $waitForResult,
-        public readonly ?string $encoding,
-        public readonly Country $country,
-        public readonly Language $language,
-        public readonly ?bool $regulationAccept,
+        public readonly Environment $environment = Environment::SANDBOX,
+        public readonly bool $autoRegisterFrontendData = true,
+        public readonly string $urlReturn = 'thank-you',
+        public readonly string $urlStatus = 'przelewy24.status',
+        public readonly string $urlTransactionRegister = 'przelewy24.transaction.register',
+        public readonly Currency $currency = Currency::PLN,
+        public readonly Country $country = Country::PL,
+        public readonly Language $language = Language::PL,
+        public readonly ?string $method = null,
+        public readonly ?int $timeLimit = null,
+        public readonly ?Channel $channel = null,
+        public readonly ?bool $waitForResult = null,
+        public readonly ?string $encoding = null,
+        public readonly ?bool $regulationAccept = null,
     ) {}
 
     public static function fromConfig(): self
