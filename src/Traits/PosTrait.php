@@ -1,6 +1,6 @@
 <?php
 
-namespace Kuzry\Przelewy24;
+namespace Kuzry\Przelewy24\Traits;
 
 trait PosTrait
 {
