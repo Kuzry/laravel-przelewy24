@@ -1,6 +1,6 @@
 {
   "name": "kuzry/laravel-przelewy24",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Laravel integration package for Przelewy24 payment gateway",
   "keywords": [
     "laravel",
