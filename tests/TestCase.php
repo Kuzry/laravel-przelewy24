@@ -2,7 +2,6 @@
 
 namespace Kuzry\Przelewy24\Tests;
 
-use Illuminate\Database\Eloquent\Factories\Factory;
 use Kuzry\Przelewy24\Przelewy24ServiceProvider;
 use Orchestra\Testbench\TestCase as Orchestra;
 

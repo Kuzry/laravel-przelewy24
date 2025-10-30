@@ -6,7 +6,7 @@ use Kuzry\Przelewy24\Tests\TestCase;
 
 class Przelewy24Test extends TestCase
 {
-    public function testDump()
+    public function test_dump()
     {
         $this->assertTrue(true);
     }

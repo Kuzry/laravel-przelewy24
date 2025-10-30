@@ -31,7 +31,7 @@ class NotificationTest extends TestCase
         $this->notification = new Notification($config);
     }
 
-    public function testValidateNotificationSignature()
+    public function test_validate_notification_signature()
     {
         $notificationData = new TransactionRegisterNotificationData(
             sessionId: 'SESSION_123456789',
