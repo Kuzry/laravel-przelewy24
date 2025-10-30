@@ -45,11 +45,11 @@ Default values from the configuration file can be overridden directly when calli
 Add the following variables to your `.env` file. You can obtain these credentials from your Przelewy24 merchant panel:
 
 ```dotenv
-PRZELEWY24_ENVIRONMENT=sandbox # sandbox or production
-PRZELEWY24_MERCHANT_ID=        # your merchant ID from Przelewy24 panel
-PRZELEWY24_POS_ID=             # your POS ID (usually same as merchant ID)
-PRZELEWY24_CRC=                # CRC key from Przelewy24
-PRZELEWY24_REPORT_KEY=         # report key used for transaction verification
+PRZELEWY24_POS_DEFAULT_ENVIRONMENT=sandbox # sandbox or production
+PRZELEWY24_POS_DEFAULT_MERCHANT_ID=        # your merchant ID from Przelewy24 panel
+PRZELEWY24_POS_DEFAULT_POS_ID=             # your POS ID (usually same as merchant ID)
+PRZELEWY24_POS_DEFAULT_CRC=                # CRC key from Przelewy24
+PRZELEWY24_POS_DEFAULT_REPORT_KEY=         # report key used for transaction verification
 ```
 
 **Note:** Always use a sandbox environment for development and testing. Switch to production only when you're ready to accept real payments.
