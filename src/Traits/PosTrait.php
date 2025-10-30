@@ -9,7 +9,6 @@ trait PosTrait
     public function setPos(string $pos): self
     {
         $this->pos = $pos;
-
         return $this;
     }
 }
