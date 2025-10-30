@@ -31,6 +31,6 @@ class Notification
             ], JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES)
         );
 
-        return $sign === $hash;
+        return hash_equals($sign, $hash);
     }
 }
